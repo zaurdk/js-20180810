@@ -1,4 +1,6 @@
 /* app css stylesheet */
+.js-hidden { display: none; }
+
 
 body {
   padding-top: 20px;
