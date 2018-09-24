@@ -1,0 +1,25 @@
+{
+  "name": "phones-catalog",
+  "version": "1.0.0",
+  "description": "Static pages of phone catalogue",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stasgavrylov/js-20180809.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stasgavrylov/js-20180809/issues"
+  },
+  "homepage": "https://github.com/stasgavrylov/js-20180809#readme"
+}
