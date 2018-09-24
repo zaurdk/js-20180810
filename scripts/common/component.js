@@ -7,4 +7,8 @@ export default class Component {
   show() { this._element.classList.remove(HIDDEN_CLASS) }
 
   hide() { this._element.classList.add(HIDDEN_CLASS) }
+
+  on(eventType, callback) {
+    this._element.addEventListener(eventType, callback);
+  }
 }
