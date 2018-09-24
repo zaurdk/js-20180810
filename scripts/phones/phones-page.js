@@ -44,6 +44,12 @@ export default class PhonesPage {
       this._catalog.show();
       this._viewer.hide();
     })
+
+    this._viewer.on('add', (event) => {
+      let phoneId = event.detail;
+
+      this._shoppingCart.addItem(phoneId);
+    })
   }
 
   _initShoppingCart() {
