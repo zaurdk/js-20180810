@@ -44,7 +44,7 @@ export default class ShoppingCart extends Component {
      <ul>
        ${Object.entries(this._items).map(([name, count]) => 
         `<li>${name} (${count}) <button data-item="${name}" data-element="button-remove">x</button></li>`
-    )}
+    ).join('')}
     </ul>
     `;
   }
