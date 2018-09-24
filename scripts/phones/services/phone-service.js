@@ -1,22 +1,19 @@
-// http://localhost:3000/phones/phones.json
+import HttpService from '../../common/services/http-service.js';
 
 const PhoneService = {
-  getPhones() {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', '/phones/phones.json', false);
-    xhr.send();
-
-    if (xhr.status != 200) {
-      alert( xhr.status + ': ' + xhr.statusText );
-    } else {
-     let responseData = JSON.parse( xhr.responseText );
-      return responseData;
-    }
+  getPhones(callback) {
+    HttpService.sendRequest('/phones/phones.json', {
+      errorCallback: () => {},
+      successCallback: callback,
+    });
   },
 
-  getPhone(phoneId) { }
+  getPhone(phoneId, callback) {
+    HttpService.sendRequest(`/phones/${phoneId}.json`,  {
+      errorCallback: () => {},
+      successCallback: callback,
+    });
+  },
 }
-
-
 
 export default PhoneService
