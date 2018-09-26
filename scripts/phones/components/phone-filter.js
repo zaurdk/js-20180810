@@ -6,7 +6,7 @@ export default class PhoneFilter extends Component {
     this._element = element;
 
     this._render();
-    this.querySelector('[data-element="sort-by-a"]').addEventListener('change', sort);
+    document.querySelector('[data-element="sort-by-a"]').addEventListener('change', sort);
   }
 
 
