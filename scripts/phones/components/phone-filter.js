@@ -12,13 +12,13 @@ export default class PhoneFilter extends Component {
 
  _sort() {
     var parent = document.querySelector('[data-component="phone-catalog"]');
-    var elems = parent.children;
+    var elems = [... parent.children];
         
     elems.sort(function(a, b) {
 	        return b.querySelector('[data-element="phone-link"]').textContent - a.querySelector('[data-element="phone-link"]').textContent
 	    }).forEach(function(el, i) {
-	        parent[i].appendChild(el)
-	    })
+	        parent[i].appendChild(el);
+	    });
  } 
 
 
