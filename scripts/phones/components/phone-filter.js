@@ -6,7 +6,21 @@ export default class PhoneFilter extends Component {
     this._element = element;
 
     this._render();
+    this.querySelector('[data-element="sort-by-a"]').addEventListener('change', sort);
   }
+
+
+ sort() {
+    var parent = document.querySelector('[data-component="phone-catalog"]');
+    var elems = parent.children;
+        
+    elements.sort(function(a, b) {
+	        return b.querySelector('[data-element="phone-link"]').textContent - a.querySelector('[data-element="phone-link"]').textContent
+	    }).forEach(function(el, i) {
+	        parent[i].appendChild(el)
+	    })
+ } 
+
 
   _render() {
     this._element.innerHTML = `
@@ -18,8 +32,8 @@ export default class PhoneFilter extends Component {
 <p>
     Sort by:
     <select>
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
+        <option value="name" data-element="sort-by-a">Alphabetical</option>
+        <option value="age" data-element="sort-by-date">Newest</option>
     </select> 
 </p>
     `
