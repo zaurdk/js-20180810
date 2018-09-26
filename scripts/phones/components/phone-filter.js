@@ -14,7 +14,7 @@ export default class PhoneFilter extends Component {
     var parent = document.querySelector('[data-component="phone-catalog"]');
     var elems = parent.children;
         
-    elements.sort(function(a, b) {
+    elems.sort(function(a, b) {
 	        return b.querySelector('[data-element="phone-link"]').textContent - a.querySelector('[data-element="phone-link"]').textContent
 	    }).forEach(function(el, i) {
 	        parent[i].appendChild(el)
