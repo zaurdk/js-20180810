@@ -6,11 +6,11 @@ export default class PhoneFilter extends Component {
     this._element = element;
 
     this._render();
-    this.on('change', '[data-element="sort-by-a"]', PhoneFilter.sort());
+    this.on('change', '[data-element="sort-by-a"]', this._sort());
 }
 
 
- sort() {
+ _sort() {
     var parent = document.querySelector('[data-component="phone-catalog"]');
     var elems = parent.children;
         
